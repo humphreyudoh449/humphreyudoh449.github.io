@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Humphrey Udoh | Data analytics and applied AI for small businesses</title>
+<meta name="description" content="Portfolio of Humphrey Udoh: a pilot study of WhatsApp marketing among 34 Nigerian SME owners, retail sales analysis, and research on AI-driven analytics for small businesses in emerging markets.">
+<meta property="og:title" content="Humphrey Udoh | Data analytics and applied AI">
+<meta property="og:description" content="Pilot study of 34 Nigerian SME owners, sales analytics and applied AI research.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Spectral:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Humphrey Samuel Udoh","jobTitle":"Data analyst and applied AI researcher","address":{"@type":"PostalAddress","addressLocality":"Port Harcourt","addressCountry":"NG"},"sameAs":["https://www.linkedin.com/in/humphrey-udoh"]}
+</script>
+<style>
+:root{
+  --paper:#F5F7F6; --ink:#10222B; --ink-soft:#44565E; --river:#0D5C63; --mist:#D5E6E4; --rule:#C6D3D1; --signal:#C98512; --signal-ink:#7A4E05;
+  --serif:"Spectral",Georgia,"Times New Roman",serif; --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--river);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0;font-weight:600;letter-spacing:-0.01em}
+p{margin:0 0 1em}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 12px;z-index:10}
+.skip:focus{left:8px}
+
+/* top bar */
+.top{border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+.top strong{font-family:var(--serif);font-size:1.15rem}
+.top nav{display:flex;gap:20px;flex-wrap:wrap;font-size:.95rem}
+.top nav a{color:var(--ink-soft);text-decoration:none}
+.top nav a:hover{color:var(--river);text-decoration:underline}
+
+/* hero */
+.hero{padding:56px 0 48px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);max-width:15ch}
+.hero .lede{font-size:1.12rem;color:var(--ink-soft);max-width:34em;margin-top:20px}
+.hero .who{margin-top:24px;font-size:.98rem;color:var(--ink-soft)}
+.hero .who b{color:var(--ink);font-weight:600}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;padding:11px 18px;border:1.5px solid var(--ink);border-radius:3px;text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem}
+.btn.primary{background:var(--ink);color:#fff}
+.btn:hover{background:var(--river);border-color:var(--river);color:#fff}
+
+/* gap chart */
+.chart{background:#fff;border:1px solid var(--rule);border-radius:4px;padding:24px}
+.chart h2{font-size:1.2rem}
+.chart .sub{font-size:.9rem;color:var(--ink-soft);margin:6px 0 16px}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.seg button{font:inherit;font-size:.88rem;padding:7px 12px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:20px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rows{display:grid;gap:12px}
+.row{display:grid;grid-template-columns:minmax(120px,170px) 1fr 44px;gap:12px;align-items:center;font-size:.92rem}
+.track{position:relative;height:18px;background:var(--mist);border-radius:2px}
+.fill{position:absolute;left:0;top:0;bottom:0;background:var(--river);border-radius:2px;width:0;transition:width .9s cubic-bezier(.2,.7,.2,1)}
+.row.low .fill{background:var(--signal)}
+.row.low .val{color:var(--signal-ink);font-weight:600}
+.neutral{position:absolute;top:-4px;bottom:-4px;width:0;border-left:1.5px dashed var(--ink);left:50%}
+.val{text-align:right;font-variant-numeric:tabular-nums}
+.axis{display:grid;grid-template-columns:minmax(120px,170px) 1fr 44px;gap:12px;font-size:.78rem;color:var(--ink-soft);margin-top:6px}
+.axis span{display:flex;justify-content:space-between}
+.note{font-size:.88rem;color:var(--ink-soft);margin-top:14px;border-left:3px solid var(--signal);padding-left:12px}
+
+/* sections */
+section.s{padding:56px 0;border-top:1px solid var(--rule)}
+.grid{display:grid;grid-template-columns:230px 1fr;gap:40px}
+.grid>h2{font-size:1.5rem;position:sticky;top:20px;align-self:start}
+.grid .meta{display:block;font-family:var(--sans);font-size:.88rem;font-weight:400;color:var(--ink-soft);margin-top:8px;letter-spacing:0}
+.body{max-width:720px}
+.body h3{font-size:1.2rem;margin:32px 0 10px}
+.body h3:first-child{margin-top:0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;border:1px solid var(--rule);background:#fff;border-radius:4px;margin:0 0 28px}
+.facts div{padding:16px 18px;border-right:1px solid var(--rule)}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font-family:var(--serif);font-size:1.9rem;line-height:1.1;font-weight:600}
+.facts span{font-size:.86rem;color:var(--ink-soft)}
+.bars{display:grid;gap:9px;margin:10px 0 24px;font-size:.92rem}
+.bars .row{grid-template-columns:minmax(130px,230px) 1fr 52px}
+.bars .track{height:14px}
+.bars .fill{background:var(--river)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.small{font-size:.9rem;color:var(--ink-soft)}
+details{margin:6px 0 22px;font-size:.92rem}
+summary{cursor:pointer;color:var(--river);font-weight:500}
+table{border-collapse:collapse;width:100%;margin-top:10px;font-size:.9rem}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--rule)}
+th{font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.limits{background:#fff;border:1px solid var(--rule);border-left:4px solid var(--signal);padding:16px 20px;border-radius:4px}
+.limits h3{margin:0 0 8px;font-size:1.05rem}
+.limits ul{margin:0;padding-left:1.1em}
+.shot{border:1.5px dashed var(--rule);background:#fff;border-radius:4px;padding:36px 24px;text-align:center;color:var(--ink-soft);font-size:.92rem;margin:18px 0}
+.shot img{max-width:100%;height:auto;display:block;margin:0 auto}
+ul.plain{padding-left:1.1em;margin:0 0 1em}
+ul.plain li{margin-bottom:.45em}
+.writing li{margin-bottom:.7em}
+footer{border-top:1px solid var(--rule);padding:36px 0 48px;font-size:.92rem;color:var(--ink-soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .grid{grid-template-columns:1fr;gap:16px}
+  .grid>h2{position:static}
+  .cols{grid-template-columns:1fr}
+  .facts div{border-right:0;border-bottom:1px solid var(--rule)}
+  .facts div:last-child{border-bottom:0}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .row{grid-template-columns:100px 1fr 38px;gap:8px;font-size:.84rem}
+  .axis{grid-template-columns:100px 1fr 38px;gap:8px}
+  .bars .row{grid-template-columns:110px 1fr 46px}
+  .chart{padding:18px}
+}
+@media (prefers-reduced-motion:reduce){.fill{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <strong>Humphrey Udoh</strong>
+    <nav aria-label="Main">
+      <a href="#pilot">Pilot study</a>
+      <a href="#sales">Sales analysis</a>
+      <a href="#pipeline">Data pipeline</a>
+      <a href="#research">Research direction</a>
+      <a href="#writing">Writing and teaching</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <h1 id="hero-title">Small businesses can see that WhatsApp works. They cannot measure how.</h1>
+      <p class="lede">I analyse data and build applied AI methods for small and medium-sized businesses in emerging markets. My pilot study of 34 Nigerian business owners shows where the measurement gap sits, and it is the starting point for my planned PhD research.</p>
+      <p class="who"><b>Humphrey Udoh</b>, Port Harcourt, Nigeria. Founder of Elivechat Digital and AI Agency. Skilled in SQL, Python, R and Power BI. Seeking postgraduate research study in Australia.</p>
+      <div class="btns">
+        <a class="btn primary" href="#pilot">Read the pilot study</a>
+        <a class="btn" href="#TODO-cv-pdf">Download CV (PDF)</a>
+      </div>
+    </div>
+
+    <figure class="chart" aria-labelledby="chart-title" style="margin:0">
+      <h2 id="chart-title">How owners rate WhatsApp and social media for their business</h2>
+      <p class="sub">Mean agreement with each statement, from 1 (strongly disagree) to 5 (strongly agree).</p>
+      <div class="seg" role="group" aria-label="Choose a group of respondents">
+        <button type="button" data-g="all" aria-pressed="true">All 34 owners</button>
+        <button type="button" data-g="daily" aria-pressed="false">Post daily (12)</button>
+        <button type="button" data-g="other" aria-pressed="false">Post less often (22)</button>
+      </div>
+      <div class="rows" id="gap-rows" aria-live="polite"></div>
+      <div class="axis" aria-hidden="true"><span></span><span><span>1</span><span>3 neutral</span><span>5</span></span><span></span></div>
+      <p class="note" id="gap-note"></p>
+    </figure>
+  </div>
+</section>
+
+<section class="s" id="pilot" aria-labelledby="pilot-h">
+  <div class="wrap grid">
+    <h2 id="pilot-h">Pilot study<span class="meta">Survey of Nigerian SME owners, September 2026</span></h2>
+    <div class="body">
+      <p>I designed a questionnaire, collected responses from owners and managers of Nigerian small businesses, and analysed what they use, what they gain, and what stops them. The goal was to find the practical problem that better analytics could solve.</p>
+      <div class="facts">
+        <div><b>34</b><span>valid owners and managers</span></div>
+        <div><b>73.5%</b><span>rely mainly on WhatsApp</span></div>
+        <div><b>50%</b><span>credit it with over a quarter of sales</span></div>
+        <div><b>17.6%</b><span>cannot estimate platform sales</span></div>
+      </div>
+
+      <h3>The gap: value is felt, but not measured</h3>
+      <p>Owners rate every benefit above neutral. The two lowest scores are the ability to attribute more customer enquiries to the platform (3.76 out of 5) and the ease of measuring results (3.79). Six owners could not say what share of sales came from their main platform at all. Respondents who posted daily scored higher on sales impact (4.50 against 3.55), which is a pattern worth testing in a larger study, not a proven effect.</p>
+
+      <div class="cols">
+        <div>
+          <h3>Main platform</h3>
+          <div class="bars" id="platform-bars"></div>
+        </div>
+        <div>
+          <h3>Share of sales from main platform</h3>
+          <div class="bars" id="sales-bars"></div>
+        </div>
+      </div>
+
+      <h3>What gets in the way</h3>
+      <p class="small" style="margin-bottom:8px">Biggest challenge in the owner's own words, coded to one theme per answer (32 answers).</p>
+      <div class="bars" id="barrier-bars"></div>
+      <p>Data cost, unstable power and network access, and limited reach were named most often. Three owners asked directly for AI or planning support, and others asked for cheaper data and better advertising features. Any tool for this market has to work on low bandwidth and low cost.</p>
+
+      <details>
+        <summary>See the numbers as a table</summary>
+        <table>
+          <caption class="small" style="text-align:left;padding:8px 0">Perceived impact, mean score (1 to 5)</caption>
+          <thead><tr><th>Statement</th><th class="n">All (34)</th><th class="n">Daily (12)</th><th class="n">Less often (22)</th></tr></thead>
+          <tbody id="impact-table"></tbody>
+        </table>
+      </details>
+
+      <div class="limits">
+        <h3>What this study cannot tell you</h3>
+        <ul>
+          <li>It is a pilot with a small convenience sample, so it shows patterns, not population estimates.</li>
+          <li>About a third of respondents are in Rivers State and 59% run the business alone.</li>
+          <li>All impact scores are self-reported opinions, each measured with a single question.</li>
+          <li>Only aggregate results are published here. No respondent details are shown.</li>
+        </ul>
+      </div>
+      <p style="margin-top:20px"><a class="btn" href="#TODO-paper-pdf">Read the full paper (PDF)</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="sales" aria-labelledby="sales-h">
+  <div class="wrap grid">
+    <h2 id="sales-h">Retail sales practical<span class="meta">Excel practical alongside a group project, Adidas US sales, BeTechified Digital Technology, October 2025</span></h2>
+    <div class="body">
+      <p>This began as a group project at BeTechified Digital Technology. I could not take a full part in the team work, so I followed what the group did and completed my own practical in Excel on the same US retail sales data, to understand how the findings were produced.</p>
+      <ul class="plain">
+        <li>Worked through revenue trends, regional performance and outlet-level drivers across states.</li>
+        <li>Reproduced the analysis steps the team used, to see how each result was reached.</li>
+        <li>Looked at how summaries and dashboards support sales decisions.</li>
+      </ul>
+      <div class="shot">
+        <!-- TODO: save your dashboard screenshot as images/adidas-dashboard.png, then replace this text with:
+             <img src="images/adidas-dashboard.png" alt="Excel dashboard of Adidas US sales by region and outlet"> -->
+        Add a screenshot of your dashboard here (images/adidas-dashboard.png).
+      </div>
+      <p><a href="#TODO-adidas-link">View the project</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="pipeline" aria-labelledby="pipe-h">
+  <div class="wrap grid">
+    <h2 id="pipe-h">Data preprocessing pipeline<span class="meta">Python and Pandas, 2025</span></h2>
+    <div class="body">
+      <p>Before any model or report, the data has to be trustworthy. I built a reproducible workflow that checks whether a dataset is complete, consistent and ready for analysis.</p>
+      <ul class="plain">
+        <li>Assessed completeness, consistency and integrity, with anomaly checks before modelling.</li>
+        <li>Used summaries, filtering, grouping and transformation to find performance differences across segments.</li>
+        <li>Kept the steps in order so the analysis can be repeated on new data.</li>
+      </ul>
+      <p class="small">The same habit shaped my pilot study, where I documented every data-quality issue and how I handled it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="research" aria-labelledby="res-h">
+  <div class="wrap grid">
+    <h2 id="res-h">Research direction<span class="meta">Planned PhD proposal</span></h2>
+    <div class="body">
+      <p>Small businesses already hold the raw material for better decisions: thousands of customer messages, comments and orders. Most of it is informal, short and never analysed.</p>
+      <p>My proposed research develops low-cost methods that turn that text into structured insight, for example how customers feel about price, delivery or service quality. It has to run on modest devices and weak connections, and it has to respect that customer conversations are private.</p>
+      <ul class="plain">
+        <li>Aspect-level sentiment extraction for informal text.</li>
+        <li>Pattern discovery, customer segmentation and anomaly detection.</li>
+        <li>Privacy-conscious design with data ownership kept with the people it belongs to.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="writing" aria-labelledby="wr-h">
+  <div class="wrap grid">
+    <h2 id="wr-h">Writing and teaching<span class="meta">Articles, training and certifications</span></h2>
+    <div class="body">
+      <h3>Articles</h3>
+      <ul class="plain writing">
+        <li><a href="https://elivechat.com.ng/what-exactly-is-google-ai-studio-and-its-benefits-to-end-users/" rel="noopener">What exactly is Google AI Studio and its benefits to end users</a> (2026)</li>
+        <li><a href="https://elivechat.com.ng/uk-seo-secret-guide-to-conquer-googles-ai-mode/" rel="noopener">UK SEO secret: guide to conquer Google's AI Mode</a> (2026)</li>
+        <li><a href="https://elivechat.com.ng/how-e-commerce-seo-agent-uses-ai-for-e-commerce-in-2025/" rel="noopener">How e-commerce SEO agents use AI for e-commerce</a> (2026)</li>
+      </ul>
+      <p class="small">I have also written more than 50 technical research articles on AI-enabled platforms and digital infrastructure for Elivechat Digital and AI Agency.</p>
+
+      <h3>Teaching</h3>
+      <p>I completed the Deeper Life DLES Train-the-Trainer programme in AI literacy and website development in July 2025, then taught it in the annual August programme: more than 90 students, leaders and teachers in 2025 and about 80 participants in 2026.</p>
+
+      <h3>Training</h3>
+      <ul class="plain">
+        <li>Introduction to Statistics with R and Excel, STEM for Development (2025)</li>
+        <li>Introduction to Python Programming, Harvard on edX (2025)</li>
+        <li>Data Analytics and BI with Databricks, and Introduction to Artificial Intelligence, Simplilearn (2025)</li>
+        <li>Introduction to Data Analysis with Power BI, and with SPSS (2025)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="contact" aria-labelledby="co-h">
+  <div class="wrap grid">
+    <h2 id="co-h">Contact</h2>
+    <div class="body">
+      <p>I am looking for a supervisor and a postgraduate research place where this work can continue. If you work on NLP, data mining or analytics for small businesses, I would like to hear from you.</p>
+      <p><a href="mailto:udohsamhumphrey@gmail.com">udohsamhumphrey@gmail.com</a><br>
+         <a href="https://www.linkedin.com/in/humphrey-udoh" rel="noopener">LinkedIn: humphrey-udoh</a><br>
+         Port Harcourt, Rivers State, Nigeria</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Humphrey Udoh</span>
+    <span>Survey figures are aggregate results from a pilot study of 34 respondents.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var items=["More customer enquiries","More sales","Reached customers outside my area","Better brand perception","Easy to measure results","I would recommend it to other owners"];
+  var data={all:[3.76,3.88,3.91,4.03,3.79,4.06],daily:[4.08,4.50,4.42,4.58,4.17,4.50],other:[3.59,3.55,3.64,3.73,3.59,3.82]};
+  var notes={
+    all:"Across all 34 owners, the two weakest scores are enquiries and measuring results. Owners feel the benefit but cannot trace it.",
+    daily:"Owners who post daily rate everything higher, yet measuring results is still among their two lowest scores.",
+    other:"Owners who post less often score lower on every statement. Small groups, so treat this as a pattern, not proof."
+  };
+  var rowsEl=document.getElementById('gap-rows'), noteEl=document.getElementById('gap-note');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function lowTwo(arr){var s=arr.map(function(v,i){return[v,i]}).sort(function(a,b){return a[0]-b[0]}); return [s[0][1],s[1][1]];}
+  function render(g,animate){
+    var arr=data[g], low=lowTwo(arr), html='';
+    arr.forEach(function(v,i){
+      var pct=((v-1)/4*100).toFixed(1);
+      html+='<div class="row'+(low.indexOf(i)>-1?' low':'')+'"><span>'+items[i]+'</span><div class="track" role="img" aria-label="'+items[i]+': '+v.toFixed(2)+' out of 5"><span class="neutral"></span><div class="fill" data-w="'+pct+'"></div></div><span class="val">'+v.toFixed(2)+'</span></div>';
+    });
+    rowsEl.innerHTML=html; noteEl.textContent=notes[g];
+    var fills=rowsEl.querySelectorAll('.fill');
+    function set(){fills.forEach(function(f){f.style.width=f.getAttribute('data-w')+'%'})}
+    if(reduce||!animate){fills.forEach(function(f){f.style.transition='none'});set();}
+    else{requestAnimationFrame(function(){requestAnimationFrame(set)});}
+  }
+  render('all',true);
+  document.querySelectorAll('.seg button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.seg button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+      b.setAttribute('aria-pressed','true'); render(b.getAttribute('data-g'),false);
+    });
+  });
+
+  function bars(id,list,total){
+    var el=document.getElementById(id), max=Math.max.apply(null,list.map(function(x){return x[1]})), html='';
+    list.forEach(function(x){
+      html+='<div class="row"><span>'+x[0]+'</span><div class="track"><div class="fill" style="width:'+(x[1]/max*100).toFixed(1)+'%;transition:none"></div></div><span class="val">'+x[1]+' <small>('+(x[1]/total*100).toFixed(0)+'%)</small></span></div>';
+    });
+    el.innerHTML=html;
+  }
+  bars('platform-bars',[["WhatsApp Business",17],["WhatsApp Personal",8],["Facebook",3],["TikTok",3],["Others",2],["Website",1]],34);
+  bars('sales-bars',[["0 to 10%",5],["11 to 25%",6],["26 to 50%",13],["51% or more",4],["Not sure",6]],34);
+  bars('barrier-bars',[["No significant challenge",7],["Data cost, power, network, device",6],["Limited reach and visibility",6],["Low conversion and competition",5],["Contact overload",3],["Account-suspension risk",2],["Consistency and time",2],["Unclear",1]],32);
+
+  var t='';
+  items.forEach(function(n,i){t+='<tr><td>'+n+'</td><td class="n">'+data.all[i].toFixed(2)+'</td><td class="n">'+data.daily[i].toFixed(2)+'</td><td class="n">'+data.other[i].toFixed(2)+'</td></tr>'});
+  document.getElementById('impact-table').innerHTML=t;
+})();
+</script>
+</body>
+</html>
